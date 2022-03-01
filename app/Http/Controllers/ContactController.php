@@ -39,4 +39,12 @@ class ContactController extends Controller
 
 
     }
+
+    public function getAllContactData(){
+        $contact = Contact::all();
+        return response()->json([
+            'status'=>200,
+            'contact_data'=>$contact,
+        ]);
+    }
 }

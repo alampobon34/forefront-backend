@@ -10,6 +10,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+Route::get('/admin/dashboard/join-now',[JoinNowController::class,'getAllJoinNowData']);
+Route::post('/join-now',[JoinNowController::class,'addJoinNow']);
 
-Route::get('/join_now',[JoinNowController::class,'joinNow']);
+Route::get('/admin/dashboard/contact',[ContactController::class,'getAllContactData']);
 Route::post('/contact',[ContactController::class,'addContact']);

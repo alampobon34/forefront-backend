@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class JoinNow extends Model
 {
     use HasFactory;
+    protected $table = "join_nows";
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'CV_file',
+    ];
+
 }
